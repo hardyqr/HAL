@@ -13,9 +13,8 @@ tensorflow-tensorboard==1.5.1
 
 ## Data
 #### MS-COCO
-[vgg_precomp](https://cs.stanford.edu/people/karpathy/deepimagesent/coco.zip) 
-
-[resnet_precomp](https://drive.google.com/uc?id=1vtUijEbXpVzNt6HjC6ph8ZzMHRRNms5j&export=download)
+[\[vgg_precomp\]](https://cs.stanford.edu/people/karpathy/deepimagesent/coco.zip) <br>
+[\[resnet_precomp\]](https://drive.google.com/uc?id=1vtUijEbXpVzNt6HjC6ph8ZzMHRRNms5j&export=download)
 
 #### Flickr30k
 [vgg_precomp](http://www.cs.toronto.edu/~faghri/vsepp/data.tar)
