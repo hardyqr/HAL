@@ -2,7 +2,14 @@
 Code release for "Improved Text-Image Matching by Mitigating Visual Semantic Hubs" [\[arxiv\]](https://arxiv.org/pdf/1911.10097v1.pdf) at AAAI 2020.
 
 ## Dependencies
-(To be completed.)
+```
+nltk==3.4.3
+pycocotools==2.0.0
+numpy==1.16.4
+torch==1.2.0
+torchvision==0.4.0
+tensorflow-tensorboard==1.5.1
+```
 
 ## Data
 #### MS-COCO
