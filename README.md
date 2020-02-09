@@ -98,6 +98,8 @@ python3 compute_results.py --data_path data/data/resnet_precomp --fold5 --model_
 ```bash
 python3 compute_results.py --data_path data/data --model_path runs/f30k/model_best.pth.tar
 ```
+#### Trained models
+[\[Google Drive\]](https://drive.google.com/drive/folders/1H_EVBFxpYKObNo_CjV0pTaB24A1jWsSF)
 
 ## Note
 Trained models and codes for replicating results on [SCAN](https://github.com/kuanghuei/SCAN) are coming soon.
