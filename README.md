@@ -1,13 +1,14 @@
 # VSE-HAL
 Code release for "Improved Text-Image Matching by Mitigating Visual Semantic Hubs" [\[arxiv\]](https://arxiv.org/pdf/1911.10097v1.pdf) at AAAI 2020.
 
-
+## Dependencies
+(To be completed.)
 
 ## Train
 
 Run `train.py`
 
-#### COCO
+#### MS-COCO
 
 ##### w/o global weighting
 
@@ -23,7 +24,7 @@ python3 train.py \
 	--img_dim 2048 \
 	--logger_name runs/COCO \
 	--local_alpha 30.00 \
-  --local_ep 0.3
+	--local_ep 0.3
 ```
 
 ##### with global weighting
@@ -40,14 +41,14 @@ python3 train.py \
 	--img_dim 2048 \
 	--logger_name runs/COCO_mb \
 	--local_alpha 30.00 \
-  --local_ep 0.3 \
+	--local_ep 0.3 \
 	--memory_bank \
-  --global_alpha 40.00 \
-  --global_beta 40.00 \
-  --global_ep_posi 0.20 \
-  --global_ep_nega 0.10 \
-  --mb_rate 0.05 \
-  --mb_k 250
+	--global_alpha 40.00 \
+	--global_beta 40.00 \
+	--global_ep_posi 0.20 \
+	--global_ep_nega 0.10 \
+ 	--mb_rate 0.05 \
+	--mb_k 250
 ```
 
 #### Flickr30k
@@ -63,7 +64,7 @@ python3 train.py \
 	--num_epochs 13 \
 	--logger_name runs/f30k \
 	--local_alpha 60.00 \
-  --local_ep 0.7
+	--local_ep 0.7
 ```
 
 ## Evaluate
@@ -82,3 +83,22 @@ python3 compute_results.py --data_path data/data/resnet_precomp --fold5 --model_
 python3 compute_results.py --data_path data/data --model_path runs/f30k/model_best.pth.tar
 ```
 
+## Note
+Codes for replicating results on [SCAN](https://github.com/kuanghuei/SCAN) is coming soon.
+
+## Acknowledgments
+This project is built upon open sourced implementations of [VSE++](https://github.com/fartashf/vsepp) and [SCAN](https://github.com/kuanghuei/SCAN).
+
+## License
+[Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0)
+
+## Reference
+Please consider citing our work if you find this repo useful:
+```
+@article{liu2020hal,
+  title={HAL: Improved Text-Image Matching by Mitigating Visual Semantic Hubs},
+  author={Liu, Fangyu and Ye, Rongtian and Wang, Xun and Li, Shuaipeng},
+  journal={AAAI},
+  year={2020}
+}
+```
