@@ -100,7 +100,7 @@ python3 compute_results.py --data_path data/data --model_path runs/f30k/model_be
 ```
 
 ## Note
-Codes for replicating results on [SCAN](https://github.com/kuanghuei/SCAN) is coming soon.
+Codes for replicating results on [SCAN](https://github.com/kuanghuei/SCAN) are coming soon.
 
 ## Acknowledgments
 This project would not be possible without the open source implementations of [VSE++](https://github.com/fartashf/vsepp) and [SCAN](https://github.com/kuanghuei/SCAN).
