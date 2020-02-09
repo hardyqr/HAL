@@ -6,7 +6,8 @@ Code release for "Improved Text-Image Matching by Mitigating Visual Semantic Hub
 
 ## Data
 #### MS-COCO
-[vgg_precomp](https://cs.stanford.edu/people/karpathy/deepimagesent/coco.zip)
+[vgg_precomp](https://cs.stanford.edu/people/karpathy/deepimagesent/coco.zip) 
+
 [resnet_precomp](https://drive.google.com/uc?id=1vtUijEbXpVzNt6HjC6ph8ZzMHRRNms5j&export=download)
 
 #### Flickr30k
@@ -95,7 +96,7 @@ python3 compute_results.py --data_path data/data --model_path runs/f30k/model_be
 Codes for replicating results on [SCAN](https://github.com/kuanghuei/SCAN) is coming soon.
 
 ## Acknowledgments
-This project is built upon open sourced implementations of [VSE++](https://github.com/fartashf/vsepp) and [SCAN](https://github.com/kuanghuei/SCAN).
+This project would not be possible without the open source implementations of [VSE++](https://github.com/fartashf/vsepp) and [SCAN](https://github.com/kuanghuei/SCAN).
 
 ## License
 [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0)
