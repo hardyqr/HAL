@@ -1,5 +1,14 @@
 # VSE-HAL
-Code release for "Improved Text-Image Matching by Mitigating Visual Semantic Hubs" [\[arxiv\]](https://arxiv.org/pdf/1911.10097v1.pdf) at AAAI 2020.
+Code release for **HAL: Improved Text-Image Matching by Mitigating Visual Semantic Hubs** [\[arxiv\]](https://arxiv.org/pdf/1911.10097v1.pdf) at AAAI 2020.
+
+Please consider citing our work if you find this repo useful:
+```
+@inproceedings{liu2020hal,
+  title={HAL: Improved Text-Image Matching by Mitigating Visual Semantic Hubs},
+  author={Liu, Fangyu and Ye, Rongtian and Wang, Xun and Li, Shuaipeng},
+  booktitle={Thirty-Fourth AAAI Conference on Artificial Intelligence (AAAI-20)},
+  year={2020}
+}
 
 ## Dependencies
 ```
@@ -104,18 +113,7 @@ python3 compute_results.py --data_path data/data --model_path runs/f30k/model_be
 Trained models and codes for replicating results on [SCAN](https://github.com/kuanghuei/SCAN) are coming soon.
 
 ## Acknowledgments
-This project would not be possible without the open source implementations of [VSE++](https://github.com/fartashf/vsepp) and [SCAN](https://github.com/kuanghuei/SCAN).
+This project would be impossible without the open source implementations of [VSE++](https://github.com/fartashf/vsepp) and [SCAN](https://github.com/kuanghuei/SCAN).
 
 ## License
 [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0)
-
-## Reference
-Please consider citing our work if you find this repo useful:
-```
-@article{liu2020hal,
-  title={HAL: Improved Text-Image Matching by Mitigating Visual Semantic Hubs},
-  author={Liu, Fangyu and Ye, Rongtian and Wang, Xun and Li, Shuaipeng},
-  journal={AAAI},
-  year={2020}
-}
-```
