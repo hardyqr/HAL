@@ -270,16 +270,20 @@ class ContrastiveLoss(nn.Module):
 
     def forward(self, im, s, mb_img, mb_cap, mb_ind, indices):
 
+        bsize = im.size()[0]
+
+        scores = self.sim(im, s)
+
         if self.opt.max_violation or self.opt.sum_violation:
 
-            diagonal = scores.diag().view(im.size()[0], 1)
+            diagonal = scores.diag().view(bsize, 1)
             d1 = diagonal.expand_as(scores)
             d2 = diagonal.t().expand_as(scores)
 
             cost_s = (self.opt.margin + scores - d1).clamp(min=0)
             cost_im = (self.opt.margin + scores - d2).clamp(min=0)
 
-            mask = torch.eye(im.size()[0]) > .5
+            mask = torch.eye(bsize) > .5
             I = Variable(mask)
             if torch.cuda.is_available():
                 I = I.cuda()
@@ -292,10 +296,6 @@ class ContrastiveLoss(nn.Module):
                 cost_im = cost_im.max(0)[0]
 
             return cost_s.sum() + cost_im.sum()
-
-        bsize = im.size()[0]
-
-        scores = self.sim(im, s)
 
         tmp  = torch.eye(bsize).cuda()
 
