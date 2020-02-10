@@ -1,7 +1,6 @@
 # VSE-HAL
 Code release for **HAL: Improved Text-Image Matching by Mitigating Visual Semantic Hubs** [\[arxiv\]](https://arxiv.org/pdf/1911.10097v1.pdf) at AAAI 2020.
 
-Please consider citing our work if you find this repo useful:
 ```
 @inproceedings{liu2020hal,
   title={HAL: Improved Text-Image Matching by Mitigating Visual Semantic Hubs},
@@ -9,7 +8,7 @@ Please consider citing our work if you find this repo useful:
   booktitle={Thirty-Fourth AAAI Conference on Artificial Intelligence (AAAI-20)},
   year={2020}
 }
-'''
+```
 
 ## Dependencies
 ```
