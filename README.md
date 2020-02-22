@@ -10,6 +10,31 @@ Code release for **HAL: Improved Text-Image Matching by Mitigating Visual Semant
 }
 ```
 
+Upgrade your text-image matching model with a few lines of code:
+```
+class ContrastiveLoss(nn.Module):
+	...
+	def forward(self, im, s, ...):
+        	bsize = im.size()[0]
+        	scores = self.sim(im, s)
+		...
+		tmp  = torch.eye(bsize).cuda()
+		s_diag = tmp * scores
+		scores_ = scores - s_diag
+		...
+		S_ = torch.exp(self.l_alpha * (scores_ - self.l_ep))
+		loss_diag = - torch.log(1 + F.relu(s_diag.sum(0)))
+
+        	loss = torch.sum( \
+                	torch.log(1 + S_.sum(0)) / self.l_alpha \
+                	+ torch.log(1 + S_.sum(1)) / self.l_alpha \
+                	+ loss_diag \
+                	) / bsize
+
+        return loss
+```
+
+
 ## Dependencies
 ```
 nltk==3.4.3
