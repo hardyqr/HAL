@@ -11,7 +11,7 @@ Code release for **HAL: Improved Text-Image Matching by Mitigating Visual Semant
 ```
 
 Upgrade your text-image matching model with a few lines of code:
-```
+```python
 class ContrastiveLoss(nn.Module):
 	...
 	def forward(self, im, s, ...):
