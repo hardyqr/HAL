@@ -2,20 +2,16 @@ import pickle
 import os
 import time
 import shutil
-
+from random import random
+import argparse
 import torch
+import logging
+import tensorboard_logger as tb_logger 
 
 import data
 from vocab import Vocabulary  # NOQA
 from model import VSE
 from evaluation import i2t, t2i, AverageMeter, LogCollector, encode_data
-
-import logging
-import tensorboard_logger as tb_logger
-from random import random
-
-import argparse
-
 
 def main():
     # Hyper Parameters
@@ -101,10 +97,6 @@ def main():
 
     logging.basicConfig(format='%(message)s', level=logging.INFO)
     tb_logger.configure(opt.logger_name, flush_secs=5)
-    logger = logging.getLogger()
-    sh = logging.StreamHandler()
-    logger.addHandler(sh)
-    logger.setLevel(logging.INFO)
 
     # Load Vocabulary Wrapper
     vocab = pickle.load(open(os.path.join(
@@ -149,7 +141,7 @@ def main():
 
         # evaluate on validation set
         rsum = validate(opt, val_loader, model)
-        print ("rsum:",rsum)
+        print ("rsum: %.1f" % rsum)
         if opt.record_val:
             with open("rst_val_" + opt.logger_name[5:], "a") as f:
                 f.write("Epoch: %d ; rsum: %.1f\n" %(epoch, rsum))
@@ -283,6 +275,7 @@ def validate(opt, val_loader, model):
 def save_checkpoint(state, is_best, filename='checkpoint.pth.tar', prefix='', save_all=True):
     torch.save(state, prefix + filename)
     if is_best:
+        print ("[Best model sofar, saved.]")
         shutil.copyfile(prefix + filename, prefix + 'model_best.pth.tar')
     if save_all:
         shutil.copyfile(prefix + filename, prefix + "Epoch-" + str(state['epoch']) + "-" + 'model.pth.tar')

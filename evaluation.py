@@ -240,7 +240,7 @@ def i2t(images, captions, npts=None, measure='cosine',
     """
     if npts is None:
         npts = int(images.shape[0] / 5)
-        print(npts)
+        #print(npts)
     index_list = []
 
     scores = images.dot(captions.T)
@@ -297,7 +297,7 @@ def t2i(images, captions, npts=None, measure='cosine',
     """
     if npts is None:
         npts = int(images.shape[0] / 5)
-        print(npts)
+        #print("# points:", npts)
     ims = numpy.array([images[i] for i in range(0, len(images), 5)])
 
     scores = captions.dot(ims.T)
