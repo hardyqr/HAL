@@ -1,11 +1,14 @@
 # VSE-HAL
 Code release for **HAL: Improved Text-Image Matching by Mitigating Visual Semantic Hubs** [\[arxiv\]](https://arxiv.org/pdf/1911.10097v1.pdf) at AAAI 2020.
 
-```
+```bibtex
 @inproceedings{liu2020hal,
-  title={HAL: Improved Text-Image Matching by Mitigating Visual Semantic Hubs},
+  title={{HAL}: Improved text-image matching by mitigating visual semantic hubs},
   author={Liu, Fangyu and Ye, Rongtian and Wang, Xun and Li, Shuaipeng},
-  booktitle={Thirty-Fourth AAAI Conference on Artificial Intelligence (AAAI-20)},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={34},
+  number={07},
+  pages={11563--11571},
   year={2020}
 }
 ```
@@ -55,7 +58,7 @@ tensorboard_logger == 0.1.0
 
 ## Train
 
-Run `train.py`
+Run `train.py`.
 
 #### MS-COCO
 
@@ -118,7 +121,7 @@ python3 train.py \
 
 ## Evaluate
 
-run `compute_results.py`
+Run `compute_results.py`.
 
 #### COCO
 
