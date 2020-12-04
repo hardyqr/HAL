@@ -45,7 +45,7 @@ pycocotools==2.0.0
 numpy==1.18.1
 torch==1.5.1
 torchvision==0.6.0
-tensorboard_logger == 0.1.0
+tensorboard_logger==0.1.0
 ```
 
 ## Data
