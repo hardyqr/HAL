@@ -10,7 +10,7 @@ nltk == 3.6.5
 # HAL/data.py: 8
 # HAL/evaluation.py: 5,8
 # HAL/model.py: 10
-numpy == 1.18.1
+numpy == 1.21.0
 
 # HAL/data.py: 7
 # HAL/vocab.py: 5
