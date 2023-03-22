@@ -27,7 +27,7 @@ tensorboard_logger == 0.1.0
 # HAL/evaluation.py: 10
 # HAL/model.py: 7,8,9
 # HAL/train.py: 7
-torch == 1.5.1
+torch == 1.13.1
 
 # HAL/data.py: 3
 # HAL/model.py: 5
