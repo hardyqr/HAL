@@ -5,7 +5,7 @@ Pillow == 9.3.0
 
 # HAL/data.py: 5
 # HAL/vocab.py: 2
-nltk == 3.6.5
+nltk == 3.6.6
 
 # HAL/data.py: 8
 # HAL/evaluation.py: 5,8
